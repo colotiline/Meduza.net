@@ -9,36 +9,36 @@ Reversed API documentation
 ```json
 {
   root: [{
-      "title" : "[Title]",
-      "screen_type" : "[screenType]",
+      "title": "[Title]",
+      "screen_type": "[screenType]",
       collection: [{
         "[uri]"
       }],
-      "updated_at":1413818419
+      "updated_at": 1413818419
   }],
   documents: {
     "[uri]": {
       "url": "[uri]",
-      "title" : "[title]",
-      "second_title" : "[secondTitle]",
+      "title": "[title]",
+      "second_title": "[secondTitle]",
       "authors": [
         ["Author"]
       ],
-      "document_type" : "[documentType]",
+      "document_type": "[documentType]",
       "version":[versionInt],
       "published_at":1413814542,
       "full":[isFullBoolean],
       "source": {
-        "url" : "[sourceUrl]",
-        "name" : "[sourceName]",
-        "quote" : "[sourceQuote]"
+        "url": "[sourceUrl]",
+        "name": "[sourceName]",
+        "quote": "[sourceQuote]"
       },
       "image": {
-        "original_url" : "[originalImageUri]",
-        "large_url" : "[largeImageUri]",
-        "small_url" : "[smallImageUri]",
-        "caption" : "[caption]",
-        "credit" : "[credit]"
+        "original_url": "[originalImageUri]",
+        "large_url": "[largeImageUri]",
+        "small_url": "[smallImageUri]",
+        "caption": "[caption]",
+        "credit": "[credit]"
       }
     }
   }
@@ -67,28 +67,28 @@ Reversed API documentation
 "table_of_contents":[
   "[chapterName]"
 ],
-"thesis" : "[thesis]",
-"chapters" : [{
-  "title" : "[title]",
-  "content" : "[content]"
+"thesis": "[thesis]",
+"chapters": [{
+  "title": "[title]",
+  "content": "[content]"
 }],
-"layout_url" : "[layoutUrl]",
-"bg_image" : {
-  "large_url" : "[largeBgUri]",
-  "small_url" : "[smallBgUri]",
-  "caption" : "[caption]",
-  "credit" : "[credit]"
+"layout_url": "[layoutUrl]",
+"bg_image": {
+  "large_url": "[largeBgUri]",
+  "small_url": "[smallBgUri]",
+  "caption": "[caption]",
+  "credit": "[credit]"
 }
 ```
 
 `fun`
 ```json
-"fun_type" : "[funType]"
+"fun_type": "[funType]"
 ```
 
 `topic`
 ```json
-"content" : [
+"content": [
   "[uri]"
 ]
 ```
