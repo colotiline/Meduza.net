@@ -14,8 +14,7 @@ Reversed API documentation
       collection: [{
         "[uri]"
       }],
-      "updated_at":1413818419,
-      "main": "[uri]"
+      "updated_at":1413818419
   }],
   documents: {
     "[uri]": {
@@ -50,6 +49,14 @@ Reversed API documentation
 `[documentType]` can be `feature`, `news`, `card`, `fun`, `topic`.
 
 `[funType]` can be `video`, `coub`, `picture`, `infographics`.
+
+### Additional JSON base on `[screenType]
+#### Is contained in `root` property
+
+`news`
+```json
+"main": "[uri]"
+```
 
 ### Additional JSON based on `[documentType]`
 #### Is contained in `documents` property
