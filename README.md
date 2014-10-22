@@ -27,6 +27,7 @@ Reversed API documentation
       "document_type": "[documentType]",
       "version":[versionInt],
       "published_at":1413814542,
+      "updated_at":1413814542,
       "full":[isFullBoolean],
       "source": {
         "url": "[sourceUrl]",
