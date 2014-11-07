@@ -57,9 +57,15 @@ namespace Meduza.net {
 			if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
 		}
 
+		//Loading full articles
+		private const string Root = "root";
 		public async Task<News> LoadNewsAsync(string uri) {
 			var content = await _httpClient.GetStringAsync(uri);
-			return JObject.Parse(content).GetValue("root").ToObject<News>();
+			return JObject.Parse(content).GetValue(Root).ToObject<News>();
+		}
+		public async Task<Document> LoadTopicAsync(string uri) {
+			var content = await _httpClient.GetStringAsync(uri);
+			return JObject.Parse(content).GetValue(Root).ToObject<Document>();
 		}
 	}
 }
