@@ -52,5 +52,13 @@ namespace Tests {
 
 			Assert.NotNull(document);
 		}
+		[Test]
+		public async void LoadCard() {
+			var api = new Api();
+			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Cards).Collection.First();
+			var document = await api.LoadCardAsync(uri);
+
+			Assert.NotNull(document);
+		}
 	}
 }

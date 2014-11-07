@@ -77,6 +77,9 @@ namespace Meduza.net {
 		}
 		public async Task<News> LoadFunAsync(string uri) {
 			return await LoadAsync(uri);
-		}		
+		}
+		public async Task<News> LoadCardAsync(string uri) {
+			return await LoadAsync(uri);
+		}	
 	}
 }
