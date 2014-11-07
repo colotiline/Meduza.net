@@ -59,17 +59,24 @@ namespace Meduza.net {
 
 		//Loading full articles
 		private const string Root = "root";
-		public async Task<News> LoadNewsAsync(string uri) {
+
+		private async Task<News> LoadAsync(string uri) {
 			var content = await _httpClient.GetStringAsync(uri);
 			return JObject.Parse(content).GetValue(Root).ToObject<News>();
+		}
+
+		public async Task<News> LoadNewsAsync(string uri) {
+			return await LoadAsync(uri);
 		}
 		public async Task<Document> LoadTopicAsync(string uri) {
 			var content = await _httpClient.GetStringAsync(uri);
 			return JObject.Parse(content).GetValue(Root).ToObject<Document>();
 		}
-		public async Task<Document> LoadArticleAsync(string uri) {
-			var content = await _httpClient.GetStringAsync(uri);
-			return JObject.Parse(content).GetValue(Root).ToObject<News>();
+		public async Task<News> LoadArticleAsync(string uri) {
+			return await LoadAsync(uri);
 		}
+		public async Task<News> LoadFunAsync(string uri) {
+			return await LoadAsync(uri);
+		}		
 	}
 }

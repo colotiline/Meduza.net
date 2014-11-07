@@ -24,25 +24,33 @@ namespace Tests {
 		public async void LoadNews() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.News).Collection.First();
-			var fullDocument = await api.LoadNewsAsync(uri);
+			var document = await api.LoadNewsAsync(uri);
 
-			Assert.NotNull(fullDocument);
+			Assert.NotNull(document);
 		}
 		[Test]
 		public async void LoadTopic() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Topic).Collection.First();
-			var fullDocument = await api.LoadTopicAsync(uri);
+			var document = await api.LoadTopicAsync(uri);
 
-			Assert.NotNull(fullDocument);
+			Assert.NotNull(document);
 		}
 		[Test]
 		public async void LoadArticle() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Articles).Collection.First();
-			var fullDocument = await api.LoadArticleAsync(uri);
+			var document = await api.LoadArticleAsync(uri);
 
-			Assert.NotNull(fullDocument);
+			Assert.NotNull(document);
+		}
+		[Test]
+		public async void LoadFun() {
+			var api = new Api();
+			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Fun).Collection.First();
+			var document = await api.LoadFunAsync(uri);
+
+			Assert.NotNull(document);
 		}
 	}
 }
