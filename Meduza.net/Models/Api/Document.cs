@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace Meduza.net.Models.Api {
-	public sealed class Document {
+	public class Document {
 		private readonly string _uri;
 		private readonly string _title;
 		private readonly string _secondTitle;
@@ -108,6 +108,6 @@ namespace Meduza.net.Models.Api {
 		public FunType FunType { get; set; }
 
 		//Topic properties
-		public IReadOnlyList<string> Content { get; set; }		
+		public IReadOnlyList<string> Content { get; set; }
 	}
 }

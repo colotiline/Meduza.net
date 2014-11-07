@@ -1,4 +1,5 @@
-﻿using Meduza.net;
+﻿using System.Linq;
+using Meduza.net;
 using NUnit.Framework;
 
 namespace Tests {
@@ -17,6 +18,15 @@ namespace Tests {
 
 			await api.InitializeAsync();		
 			Assert.NotNull(api.Main);
+		}
+		[Test]
+		public async void LoadNews() {
+			var api = new Api();
+			
+			var document = api.Main.Documents.First();
+			var fullDocument = await api.LoadNewsAsync(document.Value.Uri);
+
+			Assert.NotNull(fullDocument);
 		}
 	}
 }

@@ -12,22 +12,22 @@ namespace Meduza.net.Helpers {
 		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
 			var intValue = reader.Value as int?;
 			if (intValue.HasValue) {
-				return _unixStartDateTime.AddMilliseconds(intValue.Value);
+				return _unixStartDateTime.AddSeconds(intValue.Value);
 			}
 
 			var longValue = reader.Value as long?;
 			if (longValue.HasValue) {
-				return _unixStartDateTime.AddMilliseconds(longValue.Value);
+				return _unixStartDateTime.AddSeconds(longValue.Value);
 			}
 
 			var doubleValue = reader.Value as double?;
 			if (doubleValue.HasValue) {
-				return _unixStartDateTime.AddMilliseconds(doubleValue.Value);
+				return _unixStartDateTime.AddSeconds(doubleValue.Value);
 			}
 
 			var stringValue = reader.Value as string;
 			if (!string.IsNullOrWhiteSpace(stringValue)) {
-				return _unixStartDateTime.AddMilliseconds(Double.Parse(stringValue));
+				return _unixStartDateTime.AddSeconds(Double.Parse(stringValue));
 			}
 
 			throw new ArgumentException();

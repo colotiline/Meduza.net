@@ -1,15 +1,15 @@
-﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.IO;
+﻿using System.ComponentModel;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using Meduza.net.Annotations;
+using Meduza.net.Models.Api;
+using Meduza.net.Models.Api.Enum;
 using Meduza.net.Models.Api.Page;
+using Meduza.net.Models.Api.Types;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Meduza.net {
 	public sealed class Api : INotifyPropertyChanged {
@@ -55,6 +55,11 @@ namespace Meduza.net {
 		private void OnPropertyChanged([CallerMemberName] string propertyName = null) {
 			var handler = PropertyChanged;
 			if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+		}
+
+		public async Task<News> LoadNewsAsync(string uri) {
+			var content = await _httpClient.GetStringAsync(uri);
+			return JObject.Parse(content).GetValue("root").ToObject<News>();
 		}
 	}
 }
