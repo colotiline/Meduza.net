@@ -36,5 +36,13 @@ namespace Tests {
 
 			Assert.NotNull(fullDocument);
 		}
+		[Test]
+		public async void LoadArticle() {
+			var api = new Api();
+			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Articles).Collection.First();
+			var fullDocument = await api.LoadArticleAsync(uri);
+
+			Assert.NotNull(fullDocument);
+		}
 	}
 }

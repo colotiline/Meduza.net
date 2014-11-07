@@ -67,5 +67,9 @@ namespace Meduza.net {
 			var content = await _httpClient.GetStringAsync(uri);
 			return JObject.Parse(content).GetValue(Root).ToObject<Document>();
 		}
+		public async Task<Document> LoadArticleAsync(string uri) {
+			var content = await _httpClient.GetStringAsync(uri);
+			return JObject.Parse(content).GetValue(Root).ToObject<News>();
+		}
 	}
 }
