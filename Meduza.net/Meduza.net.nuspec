@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>Constantine Colotiline</authors>
+    <owners>Constantine Colotiline</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.NET wrapper for Meduza.io API.</description>
+    <copyright>Copyright 2014</copyright>
+    <tags>Meduza API</tags>
+  </metadata>
+</package>
