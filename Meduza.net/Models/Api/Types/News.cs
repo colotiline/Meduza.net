@@ -39,6 +39,7 @@ namespace Meduza.net.Models.Api.Types {
 			isFull, 
 			source, 
 			image) { }
-		public new Content Content { get; set; }
+		[JsonProperty(PropertyName = "Content")]
+		public Content Contents { get; set; }
 	}
 }
