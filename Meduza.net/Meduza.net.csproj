@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
+    <Compile Include="Exceptions\EmptyAnswerException.cs" />
     <Compile Include="Helpers\UnixDateTimeConverter.cs" />
     <Compile Include="Models\Api\Card\BackgroundImage.cs" />
     <Compile Include="Models\Api\Card\Chapter.cs" />
