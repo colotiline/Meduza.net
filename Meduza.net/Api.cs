@@ -28,7 +28,7 @@ namespace Meduza.net {
 		private async Task<Main> GetMainAsync() {
 			var content = await _httpClient.GetStringAsync(Uris.Index);
 			if (string.IsNullOrWhiteSpace(content)) throw new EmptyAnswerException("Meduza.io answer is empty");
-			
+		
 			return JsonConvert.DeserializeObject<Main>(content);
 		}
 		private void Initialize() {
