@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
@@ -7,7 +6,6 @@ using System.Threading.Tasks;
 using Meduza.net.Annotations;
 using Meduza.net.Exceptions;
 using Meduza.net.Models.Api;
-using Meduza.net.Models.Api.Enum;
 using Meduza.net.Models.Api.Page;
 using Meduza.net.Models.Api.Types;
 using Newtonsoft.Json;
