@@ -48,6 +48,7 @@
     <Compile Include="Models\Api\Enum\FunType.cs" />
     <Compile Include="Models\Api\Enum\ScreenType.cs" />
     <Compile Include="Models\Api\Image.cs" />
+    <Compile Include="Models\Api\Page\Topic.cs" />
     <Compile Include="Models\Api\Page\Main.cs" />
     <Compile Include="Models\Api\Root.cs" />
     <Compile Include="Models\Api\Source.cs" />

@@ -32,9 +32,9 @@ namespace Tests {
 		public async void LoadTopic() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Topic).Collection.First();
-			var document = await api.LoadTopicAsync(uri);
+			var topic = await api.LoadTopicAsync(uri);
 
-			Assert.NotNull(document);
+			Assert.NotNull(topic);
 		}
 		[Test]
 		public async void LoadArticle() {

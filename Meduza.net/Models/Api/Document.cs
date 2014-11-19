@@ -109,5 +109,6 @@ namespace Meduza.net.Models.Api {
 
 		//Topic properties
 		public IReadOnlyList<string> Content { get; set; }
+		public IReadOnlyList<Document> Documents { get; set; } 
 	}
 }

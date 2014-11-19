@@ -72,9 +72,10 @@ namespace Meduza.net {
 		public async Task<News> LoadNewsAsync(string uri) {
 			return await LoadAsync(uri);
 		}
-		public async Task<Document> LoadTopicAsync(string uri) {
+		public async Task<Topic> LoadTopicAsync(string uri) {
 			var content = await _httpClient.GetStringAsync(uri);
-			return JObject.Parse(content).GetValue(Root).ToObject<Document>();
+			return JsonConvert.DeserializeObject<Topic>(content);
+			//return JObject.Parse(content).GetValue(Root).ToObject<Document>();
 		}
 		public async Task<News> LoadArticleAsync(string uri) {
 			return await LoadAsync(uri);
