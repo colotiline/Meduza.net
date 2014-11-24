@@ -41,8 +41,9 @@ namespace Meduza.net {
 			Main = await GetMainAsync();
 			return true;
 		}
-		public async void RefreshAsync() {
+		public async Task<bool> RefreshAsync() {
 			Main = await GetMainAsync();
+			return Main != null;
 		}
 
 		public bool DefaultInitialization { get; set; }
