@@ -5,7 +5,6 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Meduza.net.Annotations;
 using Meduza.net.Exceptions;
-using Meduza.net.Models.Api;
 using Meduza.net.Models.Api.Page;
 using Meduza.net.Models.Api.Types;
 using Newtonsoft.Json;
@@ -31,6 +30,8 @@ namespace Meduza.net {
 		}
 		private void Initialize() {
 			_httpClient.GetStringAsync(Uris.Index).ContinueWith(task => {
+				if (task.Exception != null) throw task.Exception;
+
 				if (string.IsNullOrWhiteSpace(task.Result)) throw new EmptyAnswerException("Meduza.io answer is empty");
 				Main = JsonConvert.DeserializeObject<Main>(task.Result);
 			}).Wait();
@@ -41,12 +42,14 @@ namespace Meduza.net {
 			Main = await GetMainAsync();
 			return true;
 		}
+// ReSharper disable once UnusedMember.Global
 		public async Task<bool> RefreshAsync() {
 			Main = await GetMainAsync();
 			return Main != null;
 		}
 
-		public bool DefaultInitialization { get; set; }
+// ReSharper disable once MemberCanBePrivate.Global
+		public bool DefaultInitialization { get; private set; }
 		public Main Main {
 			get { return _main; }
 			private set {
