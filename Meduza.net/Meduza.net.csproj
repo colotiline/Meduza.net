@@ -52,7 +52,6 @@
     <Compile Include="Models\Api\Page\Main.cs" />
     <Compile Include="Models\Api\Root.cs" />
     <Compile Include="Models\Api\Source.cs" />
-    <Compile Include="Models\Api\Types\News.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uris.cs" />

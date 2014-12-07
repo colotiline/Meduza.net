@@ -4,6 +4,7 @@
 		News,
 		Card,
 		Fun,
-		Topic
+		Topic,
+		Gallery
 	}
 }
