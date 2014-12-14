@@ -12,7 +12,7 @@ namespace Meduza.net.Models.Api {
 		public string Uri { get; set; }
 
 		public string Title { get; set; }
-		public IReadOnlyList<IReadOnlyList<string>> Authors { get; set; }
+		public List<List<string>> Authors { get; set; }
 
 		[JsonProperty(PropertyName = "document_type")]
 		[JsonConverter(typeof(StringEnumConverter))]
@@ -36,17 +36,17 @@ namespace Meduza.net.Models.Api {
 
 		public Content Content { get; set; }
 
-		public IReadOnlyList<string> Related { get; set; }
+		public List<string> Related { get; set; }
 
 		//Card properties
 		[JsonProperty(PropertyName = "chapters_count")]
 		public int ChaptersQuantity { get; set; }
 
 		[JsonProperty(PropertyName = "table_of_contents")]
-		public IReadOnlyList<string> TableOfContents { get; set; }
+		public List<string> TableOfContents { get; set; }
 
 		public string Thesis { get; set; }
-		public IReadOnlyList<Chapter> Chapters { get; set; }
+		public List<Chapter> Chapters { get; set; }
 
 		[JsonProperty(PropertyName = "layout_url")]
 		public string LayoutUri { get; set; }
@@ -61,9 +61,9 @@ namespace Meduza.net.Models.Api {
 
 		//Topic properties
 		[JsonProperty(PropertyName = "document_urls")]
-		public IReadOnlyList<string> DocumentUris { get; set; }
+		public List<string> DocumentUris { get; set; }
 
-		public IReadOnlyList<Document> Documents { get; set; }
+		public List<Document> Documents { get; set; }
 		public string Description { get; set; }
 	}
 }

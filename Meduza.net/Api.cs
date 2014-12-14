@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 namespace Meduza.net {
 	public sealed class Api : INotifyPropertyChanged {
 		private readonly HttpClient _httpClient = new HttpClient(new HttpClientHandler {
-			AutomaticDecompression = DecompressionMethods.GZip
+			AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
 		}) {
 			BaseAddress = Uris.BaseV2
 		};
@@ -25,7 +25,7 @@ namespace Meduza.net {
 		private async Task<Main> GetMainAsync() {
 			var content = await _httpClient.GetStringAsync(Uris.Index);
 			if (string.IsNullOrWhiteSpace(content)) throw new EmptyAnswerException("Meduza.io answer is empty");
-
+			
 			return JsonConvert.DeserializeObject<Main>(content);
 		}
 		private void Initialize() {

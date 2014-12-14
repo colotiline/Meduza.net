@@ -13,7 +13,7 @@ namespace Meduza.net.Models.Api {
 		[JsonConverter(typeof(StringEnumConverter))]
 		public ScreenType ScreenType { get; set; }
 
-		public IReadOnlyList<string> Collection { get; set; }
+		public List<string> Collection { get; set; }
 
 		[JsonProperty(PropertyName = "updated_at")]
 		[JsonConverter(typeof(UnixDateTimeConverter))] 
