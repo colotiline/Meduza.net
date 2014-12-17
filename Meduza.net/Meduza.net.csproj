@@ -41,7 +41,6 @@
     <Compile Include="Exceptions\EmptyAnswerException.cs" />
     <Compile Include="Helpers\UnixDateTimeConverter.cs" />
     <Compile Include="Models\Api\Card\BackgroundImage.cs" />
-    <Compile Include="Models\Api\Card\Chapter.cs" />
     <Compile Include="Models\Api\Content.cs" />
     <Compile Include="Models\Api\Document.cs" />
     <Compile Include="Models\Api\Enum\DocumentType.cs" />

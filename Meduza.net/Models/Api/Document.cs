@@ -46,7 +46,6 @@ namespace Meduza.net.Models.Api {
 		public List<string> TableOfContents { get; set; }
 
 		public string Thesis { get; set; }
-		public List<Chapter> Chapters { get; set; }
 
 		[JsonProperty(PropertyName = "layout_url")]
 		public string LayoutUri { get; set; }

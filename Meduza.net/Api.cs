@@ -87,7 +87,7 @@ namespace Meduza.net {
 			return await LoadAsync(uri);
 		}
 		public async Task<Document> LoadCardAsync(string uri) {
-			var result = await LoadAsync(Uris.BaseV1 + uri); //Loading chapters
+			var result = await LoadAsync(uri);
 			return result;
 		}
 	}
