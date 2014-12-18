@@ -4,6 +4,7 @@
 		Video,
 		Coub,
 		Picture,
-		Infographics
+		Infographics,
+		Game
 	}
 }
