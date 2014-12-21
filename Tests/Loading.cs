@@ -24,7 +24,7 @@ namespace Tests {
 		public async void LoadNews() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.News).Collection.First();
-			var document = await api.LoadNewsAsync(uri);
+			var document = await api.LoadAsync(uri);
 
 			Assert.NotNull(document);
 		}
@@ -40,7 +40,7 @@ namespace Tests {
 		public async void LoadArticle() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Articles).Collection.First();
-			var document = await api.LoadArticleAsync(uri);
+			var document = await api.LoadAsync(uri);
 
 			Assert.NotNull(document);
 		}
@@ -48,7 +48,7 @@ namespace Tests {
 		public async void LoadFun() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Fun).Collection.First();
-			var document = await api.LoadFunAsync(uri);
+			var document = await api.LoadAsync(uri);
 
 			Assert.NotNull(document);
 		}
@@ -56,9 +56,18 @@ namespace Tests {
 		public async void LoadCard() {
 			var api = new Api();
 			var uri = api.Main.Root.First(r => r.ScreenType == ScreenType.Cards).Collection.First();
-			var document = await api.LoadCardAsync(uri);
+			var document = await api.LoadAsync(uri);
 
 			Assert.NotNull(document);
+		}
+		[Test]
+		public async void LoadGallery() {
+			var api = new Api();
+			var uri = api.Main.Documents.First(r => r.Value.DocumentType == DocumentType.Gallery).Key;
+			var document = await api.LoadAsync(uri);
+
+			Assert.NotNull(document);
+
 		}
 	}
 }

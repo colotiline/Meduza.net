@@ -64,5 +64,8 @@ namespace Meduza.net.Models.Api {
 
 		public List<Document> Documents { get; set; }
 		public string Description { get; set; }
+
+		//Gallery properties
+		public List<Gallery> Gallery { get; set; }
 	}
 }
