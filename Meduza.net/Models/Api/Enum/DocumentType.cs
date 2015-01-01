@@ -1,10 +1,13 @@
-﻿namespace Meduza.net.Models.Api.Enum {
+﻿using System.Runtime.Serialization;
+
+namespace Meduza.net.Models.Api.Enum {
 	public enum DocumentType {
 		Feature,
 		News,
 		Card,
 		Fun,
 		Topic,
-		Gallery
+		Gallery,
+		[EnumMember(Value = "new_year_card")] NewYearCard
 	}
 }
