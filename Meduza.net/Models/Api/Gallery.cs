@@ -2,7 +2,7 @@
 
 namespace Meduza.net.Models.Api {
 	public sealed class Gallery {
-		public int Id { get; set; }
+		public string Id { get; set; }
 
 		[JsonProperty(PropertyName = "original_url")]
 		public string OriginalUri { get; set; }
