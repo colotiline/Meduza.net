@@ -53,7 +53,8 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Loading.cs" />
+    <Compile Include="Api\English.cs" />
+    <Compile Include="Api\Russian.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
