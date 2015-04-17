@@ -4,6 +4,7 @@
 		Topic,
 		Cards,
 		Articles,
-		Fun
+		Fun,
+		Polygon
 	}
 }
