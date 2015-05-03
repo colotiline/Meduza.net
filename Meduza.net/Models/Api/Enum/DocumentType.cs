@@ -2,6 +2,7 @@
 
 namespace Meduza.net.Models.Api.Enum {
 	public enum DocumentType {
+        Promo,
 		Feature,
 		News,
 		Card,
