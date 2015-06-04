@@ -9,6 +9,7 @@ namespace Meduza.net.Models.Api.Enum {
 		Fun,
 		Topic,
 		Gallery,
-		[EnumMember(Value = "new_year_card")] NewYearCard
+		[EnumMember(Value = "new_year_card")] NewYearCard,
+        Rotation
 	}
 }
