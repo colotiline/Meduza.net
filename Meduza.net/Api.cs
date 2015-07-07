@@ -18,7 +18,7 @@ namespace Meduza.net {
         private readonly HttpClient _httpClient = new HttpClient(new HttpClientHandler {
             AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
         }) {
-            BaseAddress = Uris.BaseV2
+            BaseAddress = Uris.Base
         };
         public Api(Language language, bool defaultInitialization = true) {
             _language = language;
