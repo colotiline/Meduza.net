@@ -1,3 +1,6 @@
+Not supported
+==========
+
 Meduza.net
 ==========
 [![Build status](https://ci.appveyor.com/api/projects/status/92815lu12f315fi4?svg=true)](https://ci.appveyor.com/project/colotiline/meduza-net)
